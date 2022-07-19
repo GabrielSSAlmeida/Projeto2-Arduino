@@ -1,6 +1,8 @@
 # Projeto2-Arduino
 Projeto feito para disciplina "Eletrônica para Computação" com o professor Eduardo do Valle Simões
 
+<img src="./imagens_robo/robo_frente.jpeg">
+
 ## Lista de componentes:
 * **Arduino Uno**: Responsável por tomar decisões de acordo com valores dos sensores;
 * **Sensor Ultrassônico**;
