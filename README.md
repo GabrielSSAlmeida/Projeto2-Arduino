@@ -12,3 +12,8 @@ Projeto feito para disciplina "Eletrônica para Computação" com o professor Ed
 * **Ponte H**;
 * **2x Pilhas Recarregáveis de 3.7V**;
 * **Arduino Shield Sensor v5**.
+
+
+## Diagrama:
+
+## Vídeo de funcionamento:
