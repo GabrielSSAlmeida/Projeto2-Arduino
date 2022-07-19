@@ -31,3 +31,13 @@ Projeto feito para disciplina "Eletrônica para Computação" com o professor Ed
 ## Diagrama:
 
 ## Vídeo de funcionamento:
+
+## Alunos
+
+Artur De Vlieger Lima
+
+Calebe Damas Nogueira
+
+Gabriel Souza Santos de Almeida
+
+Lucas Vizzotto de Castro
