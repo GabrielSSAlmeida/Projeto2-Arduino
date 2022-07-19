@@ -32,7 +32,7 @@ Projeto feito para disciplina "Eletrônica para Computação" com o professor Ed
 
 ## Vídeo de funcionamento:
 
-## Alunos
+## Alunos:
 
 Artur De Vlieger Lima
 
