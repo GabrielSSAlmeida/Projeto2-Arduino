@@ -24,6 +24,7 @@ Ponte H
 <img src="./imagens_robo/robo_baixo.jpeg">
 
 Local para pilhas
+<p>
 <img src="./imagens_robo/robo_bateria.jpeg">
 
 
