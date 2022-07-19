@@ -4,7 +4,7 @@ Projeto feito para disciplina "Eletrônica para Computação" com o professor Ed
 <img src="./imagens_robo/robo_frente.jpeg">
 
 ## Lista de componentes:
-* **Arduino Uno**: Responsável por tomar decisões de acordo com valores dos sensores;
+* **Arduino Uno**;
 * **Sensor Ultrassônico**;
 * **Sensor de Obstáculos Infravermelho**;
 * **Servo Motor**;
