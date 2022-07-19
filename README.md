@@ -14,11 +14,17 @@ Projeto feito para disciplina "Eletrônica para Computação" com o professor Ed
 * **2x Pilhas Recarregáveis de 3.7V**.
 
 ## Imagens:
-<img src="./imagens_robo/robo_arduino.jpeg"> 
 Arduino Uno e Shield Sensor v5.
+<img src="./imagens_robo/robo_arduino.jpeg"> 
 
-<img src="./imagens_robo/robo_ponteH.jpeg">
 Ponte H
+<img src="./imagens_robo/robo_ponteH.jpeg">
+
+
+<img src="./imagens_robo/robo_baixo.jpeg">
+
+Local para pilhas
+<img src="./imagens_robo/robo_bateria.jpeg">
 
 
 
