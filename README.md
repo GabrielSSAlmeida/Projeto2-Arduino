@@ -254,7 +254,7 @@ Projeto feito para disciplina "Eletrônica para Computação" com o professor Ed
           #ifdef send
           #endif
 
-          /* encontra obstaculo na frente
+          /* encontra obstaculo na frente */
           if(middleDistance < 60)
           {    
             /* le distancia da direita */
