@@ -24,7 +24,7 @@ Projeto feito para disciplina "Eletrônica para Computação" com o professor Ed
 <img src="./imagens_robo/robo_baixo.jpeg">
 
 <h3>Esses são os sensores ultrassônicos do robô(com umas folhinhas de papel para parecer o Wall-E). Elas emitem um sinal sonoro e por meio do tempo que esse sinal leva para retornar calculam a distância até um certo objeto. Por meio delas, por exemplo, conseguimos fazer o carro detectar um obstáculo e desviar de direção<p></h3>
-<img src="./imagens_robo/sonar.jpeg">
+<img src="./imagens_robo/sonar.jpg">
 
 <h3>Aqui é a fonte de alimentação do nosso projeto, utilizamos duas pilhas de 3.7V para conseguir alimentar o sonar a ponte H o arduino e os sensores infravermelhos.<p></h3>
 <img src="./imagens_robo/robo_bateria.jpeg">
@@ -32,7 +32,7 @@ Projeto feito para disciplina "Eletrônica para Computação" com o professor Ed
 
 
 ## Diagrama:
-<img src="./imagens_robo/robo_diagrama_esquematico.jpeg">
+<img src="./imagens_robo/robo_diagrama_esquematico.jpg">
 <img src="./imagens_robo/robo_diagrama_tabela.jpeg">
 
 ## Vídeo de funcionamento:
