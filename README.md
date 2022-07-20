@@ -37,105 +37,94 @@ Projeto feito para disciplina "Eletrônica para Computação" com o professor Ed
 
 ## Vídeo de funcionamento:
 
-## Códigos usados estão nos arquivos segue_linha e desvia_de_obstaculos
+## Códigos usados
 
 #### Cógido para seguir linha (arquivo segue_linha)
 
-      //www.elegoo.com
-      //2016.09.12
       #include <Servo.h>
       Servo myservo;
 
-
+      
+      /* definir leitor de linha */
       #define LT1 digitalRead(11)
       #define LT2 digitalRead(4)
       #define LT3 digitalRead(2)
 
 
-      /*define logic control output pin*/
+      /* definir pinos de saida de controle logico */
       int in1=9;
       int in2=8;
       int in3=7;
       int in4=6;
-      /*define channel enable output pins*/
+      
+      /* definir pinos de saida de habilitacao de canal */
       int ENA=12;
       int ENB=5;
-      /*define forward function*/
+      
+      /* funcao de movimento para frente */
       void _mForward()
       { 
-        digitalWrite(ENA,10);
-        digitalWrite(ENB,10);
+        digitalWrite(ENA,HIGH);
+        digitalWrite(ENB,HIGH);
         digitalWrite(in1,LOW);//digital output
         digitalWrite(in2,HIGH);
         digitalWrite(in3,HIGH);
         digitalWrite(in4,LOW);
         Serial.println("Forward");
       }
-      /*define back function*/
-      void _mBack()
-      {
-        digitalWrite(ENA,10);
-        digitalWrite(ENB,10);
-        digitalWrite(in1,HIGH);
-        digitalWrite(in2,LOW);
-        digitalWrite(in3,LOW);
-        digitalWrite(in4,HIGH);
-        Serial.println("Back");
-      }
-      /*define left function*/
+      /* funcao de curva para a esquerda */
       void _mleft()
       {
-        digitalWrite(ENA,10);
-        digitalWrite(ENB,10);
+        digitalWrite(ENA,HIGH);
+        digitalWrite(ENB,HIGH);
         digitalWrite(in1,LOW);
         digitalWrite(in2,HIGH);
         digitalWrite(in3,LOW);
         digitalWrite(in4,HIGH);
         Serial.println("Left");
       }
-      /*define right function*/
+      /* funcao de curva para a direita */
       void _mright()
       {
-        digitalWrite(ENA,10);
-        digitalWrite(ENB,10);
+        digitalWrite(ENA,HIGH);
+        digitalWrite(ENB,HIGH);
         digitalWrite(in1,HIGH);
         digitalWrite(in2,LOW);
         digitalWrite(in3,HIGH);
         digitalWrite(in4,LOW);
         Serial.println("Right");
       }
-      /*put your setup code here, to run once*/
+      
       void setup() {
-       Serial.begin(9600); //Open the serial port and set the baud rate to 9600
-      /*Set the defined pins to the output*/
+        /* Abre a porta serial e define a taxa de transmissao para 9600 */
+        Serial.begin(9600);
+        
+        /* Configura os pinos declarando como saida */
         pinMode(in1,OUTPUT);
         pinMode(in2,OUTPUT);
         pinMode(in3,OUTPUT);
         pinMode(in4,OUTPUT);
         pinMode(ENA,OUTPUT);
         pinMode(ENB,OUTPUT);
-
+        
+        
+        /* indica qual entrada do arduino sera usada */
+        /* o servo apenas esta sendo usado nesse codigo a fim de que o robo "olhe" para a direcao para a qual esta andando */
         myservo.attach(3);  
       }
-      /*put your main code here, to run repeatedly*/
+      
       void loop() {
-      /*delay(3000);
-      _mForward();
-      delay(1000);
-      _mBack();
-      delay(1000);
-      _mleft();
-      delay(1000);
-      _mright();
-      delay(1000);*/
+        /* anda para frente quando e retornado sinal do sensor central */
         if(LT2){
           myservo.write(90);
           _mForward();
         }
+        /* anda para a esquerda quando e retornado sinal do sensor da esquerda */
         else if(LT1) { 
           myservo.write(120);
           _mleft();                            
         }   
+        /* anda para a direita quando e retornado sinal do sensor da direita */
         else if(LT3) {
           myservo.write(60);
           _mright();
@@ -144,21 +133,29 @@ Projeto feito para disciplina "Eletrônica para Computação" com o professor Ed
       
 #### Código para desviar de obstáculos (arquivo desvia_de_obstaculos)
 
-      //www.elegoo.com
-      //2016.09.12
       #include <Servo.h>
       Servo myservo;
-
+      
+      /* definir pinos de saida de controle logico */
       int Echo = A5;  
       int Trig = A4; 
       int in1=9;
       int in2=8;
       int in3=7;
       int in4=6;
+      
+      /* definir pinos de saida de habilitacao de canal */
       int ENA=12;
       int ENB=5;
+      
+      /* inteiro que define a velocidade do motor */
+      /* para uso do ABS, altere as funcoes digitalWrite() dos pinos ENA e ENB nas funcoes de movimento para analogWrite() e troque HIGH pela variavel ABS */
       int ABS = 150;
+      
+      /* inicializa as entradas como zero */
       int rightDistance = 0,leftDistance = 0,middleDistance = 0;
+      
+      /* funcao de movimento para frente */
       void _mForward()
       { 
         digitalWrite(ENA,HIGH);
@@ -169,7 +166,8 @@ Projeto feito para disciplina "Eletrônica para Computação" com o professor Ed
         digitalWrite(in4,LOW);
         Serial.println("Forward");
       }
-      /*define back function*/
+      
+      /* funcao de movimento para tras */
       void _mBack()
       {
         digitalWrite(ENA,HIGH);
@@ -180,7 +178,8 @@ Projeto feito para disciplina "Eletrônica para Computação" com o professor Ed
         digitalWrite(in4,HIGH);
         Serial.println("Back");
       }
-      /*define left function*/
+      
+      /* funcao de curva para a esquerda */
       void _mleft()
       {
         digitalWrite(ENA,10);
@@ -191,7 +190,8 @@ Projeto feito para disciplina "Eletrônica para Computação" com o professor Ed
         digitalWrite(in4,HIGH);
         Serial.println("Left");
       }
-      /*define right function*/
+      
+      /* funcao de curva para a direita */
       void _mright()
       {
         digitalWrite(ENA,10);
@@ -202,12 +202,16 @@ Projeto feito para disciplina "Eletrônica para Computação" com o professor Ed
         digitalWrite(in4,LOW);
         Serial.println("Right");
       }
+      
+      /* funcao de interromper movimento */
       void _mStop()
       {
         digitalWrite(ENA,LOW);
         digitalWrite(ENB,LOW);
         Serial.println("Stop!");
       }
+      
+      /* funcao que retorna, em centimetros, a distancia lida pelo sonar */
       int Distance_test()   
       {
         digitalWrite(Trig, LOW);   
@@ -221,8 +225,13 @@ Projeto feito para disciplina "Eletrônica para Computação" com o professor Ed
         delay(25);       
         return Fdistance;
       }  
+      
+      
       void setup() {
-        Serial.begin(9600); //Open the serial port and set the baud rate to 9600
+        /* Abre a porta serial e define a taxa de transmissao para 9600 */
+        Serial.begin(9600); 
+        
+        /* Configura os pinos declarando como saida */
         pinMode(Echo, INPUT);    
         pinMode(Trig, OUTPUT); 
         pinMode(in1,OUTPUT);
@@ -231,28 +240,34 @@ Projeto feito para disciplina "Eletrônica para Computação" com o professor Ed
         pinMode(in4,OUTPUT);
         pinMode(ENA,OUTPUT);
         pinMode(ENB,OUTPUT);
+        
+        /* indica qual entrada do arduino sera usada */
         myservo.attach(3);
+        
         _mStop();  
       }
-      /*put your main code here, to run repeatedly*/
+      
       void loop() {
-          myservo.write(90);//setservo position according to scaled value
+          myservo.write(90);
           delay(500); 
           middleDistance = Distance_test();
           #ifdef send
           #endif
 
+          /* encontra obstaculo na frente
           if(middleDistance < 60)
-          {     
+          {    
+            /* le distancia da direita */
             _mStop();
             delay(500);                         
-            myservo.write(20);//10°-180°          
+            myservo.write(20); //10°-180°          
             delay(1000);      
             rightDistance = Distance_test();
 
             #ifdef send
             #endif
-
+            
+            /* le distancia da esquerda */
             delay(500);
             myservo.write(90);              
             delay(1000);                                                  
@@ -266,24 +281,32 @@ Projeto feito para disciplina "Eletrônica para Computação" com o professor Ed
             delay(500);
             myservo.write(90);              
             delay(1000);
+            
+            /* caso sejam encontrados obstaculos na frente, na direita e atras: movimento para tras */
             if(rightDistance<20 && leftDistance < 20)  
             {
               _mBack();
               delay(1000);
               _mStop();
              }
+             
+             /* ostaculo na frente e na esquerda: movimento para a direita */
              else if(leftDistance< 20)
              {
               _mright();
               delay(1000);
               _mStop();
              }
+             
+             /* obstaculo na frente e na direita: movimento para a esquerda */
              else if(rightDistance<20)
              {
               _mleft();
               delay(1000);
               _mStop();
              }
+             
+             /* obstaculo apenas na frente: da uma re e faz um movimento para a esquerda */
              else
              {
               _mBack();
@@ -293,6 +316,8 @@ Projeto feito para disciplina "Eletrônica para Computação" com o professor Ed
               _mStop();
              }
           }  
+          
+          /* movimento para a frente ate encontrar um obstaculo */
           else
           {
             _mForward();                     
