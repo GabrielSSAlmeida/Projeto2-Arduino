@@ -32,6 +32,8 @@ Projeto feito para disciplina "Eletrônica para Computação" com o professor Ed
 
 
 ## Diagrama:
+<img src="./imagens_robo/robo_diagrama_esquematico.jpeg">
+<img src="./imagens_robo/robo_diagrama_tabela.jpeg">
 
 ## Vídeo de funcionamento:
 
