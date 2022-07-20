@@ -37,7 +37,7 @@ Projeto feito para disciplina "Eletrônica para Computação" com o professor Ed
 
 ## Códigos usados:
 
-'''arduino
+'''ino
 //www.elegoo.com
 //2016.09.12
 #include <Servo.h>
