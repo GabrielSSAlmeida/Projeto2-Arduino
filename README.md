@@ -39,7 +39,7 @@ Projeto feito para disciplina "Eletrônica para Computação" com o professor Ed
 
 ## Códigos usados estão nos arquivos segue_linha e desvia_de_obstaculos
 
-# Cógido para seguir linha (arquivo segue_linha)
+#### Cógido para seguir linha (arquivo segue_linha)
 
       //www.elegoo.com
       //2016.09.12
@@ -142,7 +142,7 @@ Projeto feito para disciplina "Eletrônica para Computação" com o professor Ed
         }
       }
       
-# Código para desviar de obstáculos (arquivo desvia_de_obstaculos)
+#### Código para desviar de obstáculos (arquivo desvia_de_obstaculos)
 
       //www.elegoo.com
       //2016.09.12
