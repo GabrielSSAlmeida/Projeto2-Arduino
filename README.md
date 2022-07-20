@@ -1,4 +1,4 @@
-# Projeto2-Arduino, Robô capaz de desviar de obstáculos e de desviar de linhas.
+# Projeto2-Arduino, Robô capaz de desviar de obstáculos e de seguir linhas.
 Projeto feito para disciplina "Eletrônica para Computação" com o professor Eduardo do Valle Simões
 
 <img src="./imagens_robo/robo_frente.jpeg">
