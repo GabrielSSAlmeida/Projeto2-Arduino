@@ -37,7 +37,7 @@ Projeto feito para disciplina "Eletrônica para Computação" com o professor Ed
 
 ## Códigos usados:
 
-'''
+''''
 //www.elegoo.com
 //2016.09.12
 #include <Servo.h>
@@ -138,7 +138,7 @@ delay(1000);*/
     _mright();
   }
 }
-'''
+''''
 
 ## Alunos:
 
