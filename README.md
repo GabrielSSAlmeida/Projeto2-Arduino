@@ -1,4 +1,4 @@
-# Projeto2-Arduino
+# Projeto2-Arduino, Robô capaz de desviar de obstáculos e de desviar de linhas.
 Projeto feito para disciplina "Eletrônica para Computação" com o professor Eduardo do Valle Simões
 
 <img src="./imagens_robo/robo_frente.jpeg">
@@ -7,23 +7,23 @@ Projeto feito para disciplina "Eletrônica para Computação" com o professor Ed
 * **Arduino Uno**;
 * **Arduino Shield Sensor v5**;
 * **Sensor Ultrassônico**;
-* **Sensor de Obstáculos Infravermelho**;
+* **3x Sensores infravermelhos de segue linha**;
 * **Servo Motor**;
 * **4x Motores DC**;
 * **Ponte H**;
 * **2x Pilhas Recarregáveis de 3.7V**.
 
-## Imagens:
-<h3>Arduino Uno e Shield Sensor v5.</h3>
+## Componentes:
+<h3>Esse aqui é o Arduino Uno Shield Sensor v5. Usamos ele para conectar no arduino uno e facilitar as conexões dos dados nas entradas e saídas.</h3>
 <img src="./imagens_robo/robo_arduino.jpeg"> 
 
-<h3>Ponte H</h3>
+<h3>Essa é a ponte H. Por meio dela, conseguimos controlar os dois motores e fazer o carrinho se mover</h3>
 <img src="./imagens_robo/robo_ponteH.jpeg">
 
-<h3>??</h3>
+<h3>Esses 3 são os sensores infravermelhos d segue linha, eles funcionam com o princípio de que a co preta reflete a luz infravermelha de maneira diferente da branca, assim o carro consegue detectar uma linha preta no chão, por exemplo, e com a programação certa segui-la</h3>
 <img src="./imagens_robo/robo_baixo.jpeg">
 
-<h3>Local para pilhas<p></h3>
+<h3>Aqui é a fonte de alimentação do nosso projeto, utilizamos duas pilhas de 3.7V para conseguir alimentar o sonar a ponte H o arduino e os sensores infravermelhos.<p></h3>
 <img src="./imagens_robo/robo_bateria.jpeg">
 
 
