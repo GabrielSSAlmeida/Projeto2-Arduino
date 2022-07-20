@@ -39,6 +39,7 @@ Projeto feito para disciplina "Eletrônica para Computação" com o professor Ed
 
 ## Códigos usados estão nos arquivos segue_linha e desvia_de_obstaculos
 
+# Cógido para seguir linha (arquivo segue_linha)
 
       //www.elegoo.com
       //2016.09.12
@@ -139,6 +140,163 @@ Projeto feito para disciplina "Eletrônica para Computação" com o professor Ed
           myservo.write(60);
           _mright();
         }
+      }
+      
+# Código para desviar de obstáculos (arquivo desvia_de_obstaculos)
+
+      //www.elegoo.com
+      //2016.09.12
+      #include <Servo.h>
+      Servo myservo;
+
+      int Echo = A5;  
+      int Trig = A4; 
+      int in1=9;
+      int in2=8;
+      int in3=7;
+      int in4=6;
+      int ENA=12;
+      int ENB=5;
+      int ABS = 150;
+      int rightDistance = 0,leftDistance = 0,middleDistance = 0;
+      void _mForward()
+      { 
+        digitalWrite(ENA,HIGH);
+        digitalWrite(ENB,HIGH);
+        digitalWrite(in1,LOW);//digital output
+        digitalWrite(in2,HIGH);
+        digitalWrite(in3,HIGH);
+        digitalWrite(in4,LOW);
+        Serial.println("Forward");
+      }
+      /*define back function*/
+      void _mBack()
+      {
+        digitalWrite(ENA,HIGH);
+        digitalWrite(ENB,HIGH);
+        digitalWrite(in1,HIGH);
+        digitalWrite(in2,LOW);
+        digitalWrite(in3,LOW);
+        digitalWrite(in4,HIGH);
+        Serial.println("Back");
+      }
+      /*define left function*/
+      void _mleft()
+      {
+        digitalWrite(ENA,10);
+        digitalWrite(ENB,10);
+        digitalWrite(in1,LOW);
+        digitalWrite(in2,HIGH);
+        digitalWrite(in3,LOW);
+        digitalWrite(in4,HIGH);
+        Serial.println("Left");
+      }
+      /*define right function*/
+      void _mright()
+      {
+        digitalWrite(ENA,10);
+        digitalWrite(ENB,10);
+        digitalWrite(in1,HIGH);
+        digitalWrite(in2,LOW);
+        digitalWrite(in3,HIGH);
+        digitalWrite(in4,LOW);
+        Serial.println("Right");
+      }
+      void _mStop()
+      {
+        digitalWrite(ENA,LOW);
+        digitalWrite(ENB,LOW);
+        Serial.println("Stop!");
+      }
+      int Distance_test()   
+      {
+        digitalWrite(Trig, LOW);   
+        delayMicroseconds(2);
+        digitalWrite(Trig, HIGH);  
+        delayMicroseconds(10);
+        digitalWrite(Trig, LOW);
+        delayMicroseconds(2);   
+        long duracao = pulseIn(Echo, HIGH, 150000L);  
+        int Fdistance= duracao * 0.034 / 2;
+        delay(25);       
+        return Fdistance;
+      }  
+      void setup() {
+        Serial.begin(9600); //Open the serial port and set the baud rate to 9600
+        pinMode(Echo, INPUT);    
+        pinMode(Trig, OUTPUT); 
+        pinMode(in1,OUTPUT);
+        pinMode(in2,OUTPUT);
+        pinMode(in3,OUTPUT);
+        pinMode(in4,OUTPUT);
+        pinMode(ENA,OUTPUT);
+        pinMode(ENB,OUTPUT);
+        myservo.attach(3);
+        _mStop();  
+      }
+      /*put your main code here, to run repeatedly*/
+      void loop() {
+          myservo.write(90);//setservo position according to scaled value
+          delay(500); 
+          middleDistance = Distance_test();
+          #ifdef send
+          #endif
+
+          if(middleDistance < 60)
+          {     
+            _mStop();
+            delay(500);                         
+            myservo.write(20);//10°-180°          
+            delay(1000);      
+            rightDistance = Distance_test();
+
+            #ifdef send
+            #endif
+
+            delay(500);
+            myservo.write(90);              
+            delay(1000);                                                  
+            myservo.write(170);              
+            delay(1000); 
+            leftDistance = Distance_test();
+
+            #ifdef send
+            #endif
+
+            delay(500);
+            myservo.write(90);              
+            delay(1000);
+            if(rightDistance<20 && leftDistance < 20)  
+            {
+              _mBack();
+              delay(1000);
+              _mStop();
+             }
+             else if(leftDistance< 20)
+             {
+              _mright();
+              delay(1000);
+              _mStop();
+             }
+             else if(rightDistance<20)
+             {
+              _mleft();
+              delay(1000);
+              _mStop();
+             }
+             else
+             {
+              _mBack();
+              delay(500);
+              _mleft();
+              delay(500);
+              _mStop();
+             }
+          }  
+          else
+          {
+            _mForward();                     
+          }
       }
 
 ## Alunos:
