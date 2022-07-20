@@ -40,4 +40,3 @@ Calebe Damas Nogueira
 
 Gabriel Souza Santos de Almeida
 
-Lucas Vizzotto de Castro
