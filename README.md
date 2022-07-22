@@ -37,6 +37,8 @@ Projeto feito para disciplina "Eletrônica para Computação" com o professor Ed
 
 ## Vídeo de funcionamento:
 
+https://youtu.be/LGvDf1pJzMQ
+
 ## Códigos usados
 
 #### Cógido para seguir linha (arquivo segue_linha)
