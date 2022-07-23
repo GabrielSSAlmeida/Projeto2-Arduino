@@ -13,6 +13,8 @@ Projeto feito para disciplina "Eletrônica para Computação" com o professor Ed
 * **Ponte H**;
 * **2x Pilhas Recarregáveis de 3.7V**.
 
+OBS: Os links são apenas para ajudar na compra, mas o grupo não garante a procedência dessas lojas. 
+
 ## Componentes:
 <h3>Esse aqui é o Arduino Uno Shield Sensor v5. Usamos ele para conectar no arduino uno e facilitar as conexões dos dados nas entradas e saídas.</h3>
 <img src="./imagens_robo/robo_arduino.jpeg"> 
