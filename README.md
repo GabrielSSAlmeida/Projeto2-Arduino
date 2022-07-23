@@ -4,7 +4,7 @@ Projeto feito para disciplina "Eletrônica para Computação" com o professor Ed
 <img src="./imagens_robo/robo_frente.jpeg">
 
 ## Lista de componentes:
-* **Arduino Uno**;
+* **[Arduino Uno](https://www.wjcomponentes.com.br/arduino-uno-r3?parceiro=6298&gclid=Cj0KCQjwlemWBhDUARIsAFp1rLXXRjnmUf28JuTs7vJEahyzHQNulgMpKd_8ZTKi6LKbq0MQoYi6lK8aAly3EALw_wcB)**;
 * **Arduino Shield Sensor v5**;
 * **Sensor Ultrassônico**;
 * **3x Sensores infravermelhos de segue linha**;
