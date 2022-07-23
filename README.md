@@ -5,13 +5,13 @@ Projeto feito para disciplina "Eletrônica para Computação" com o professor Ed
 
 ## Lista de componentes:
 * **[Arduino Uno](https://www.wjcomponentes.com.br/arduino-uno-r3?parceiro=6298&gclid=Cj0KCQjwlemWBhDUARIsAFp1rLXXRjnmUf28JuTs7vJEahyzHQNulgMpKd_8ZTKi6LKbq0MQoYi6lK8aAly3EALw_wcB)**;
-* **Arduino Shield Sensor v5**;
-* **Sensor Ultrassônico**;
-* **3x Sensores infravermelhos de segue linha**;
-* **Servo Motor**;
-* **4x Motores DC**;
-* **Ponte H**;
-* **2x Pilhas Recarregáveis de 3.7V**.
+* **[Arduino Shield Sensor v5](https://www.wjcomponentes.com.br/sensores/shield-sensor-v5?parceiro=6298&gclid=Cj0KCQjwlemWBhDUARIsAFp1rLWyl2DaFC4bJrkin5tWJDtAEjEgp5JKVKMJHvIxLU2Wn70tp_T1jD0aAjr1EALw_wcB)**;
+* **[Sensor Ultrassônico](https://www.baudaeletronica.com.br/modulo-de-sensor-ultrassonico-hc-sr04.html?gclid=Cj0KCQjwlemWBhDUARIsAFp1rLVdvVXiuTmYQeKTRq5vNrWMnUuh9OBFf7pbaAqXgq4sLdiVYzUZDXMaAhtGEALw_wcB)**;
+* **[3x Sensores infravermelhos de segue linha](https://produto.mercadolivre.com.br/MLB-2161686373-modulo-sensor-seguir-linha-line-tracking-arduino-pic-ky-033-_JM?matt_tool=40343894&matt_word=&matt_source=google&matt_campaign_id=14303413655&matt_ad_group_id=133855953276&matt_match_type=&matt_network=g&matt_device=c&matt_creative=584156655519&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=465009696&matt_product_id=MLB2161686373&matt_product_partition_id=1413191055026&matt_target_id=aud-659781599642:pla-1413191055026&gclid=Cj0KCQjwlemWBhDUARIsAFp1rLVtqBApBzplaJBIRardUfLW_B7QpCGPbIMmKj-heDXRZsj137ykEkAaAk7NEALw_wcB)**;
+* **[Servo Motor](https://www.eletrogate.com/micro-servo-9g-sg90-towerpro?utm_source=Site&utm_medium=GoogleMerchant&utm_campaign=GoogleMerchant&gclid=Cj0KCQjwlemWBhDUARIsAFp1rLUaxegc2wQdypo5-ttqysj68LCmrH2FXbZtPZ08DoJO0zcGDVi-wysaAmtqEALw_wcB)**;
+* **[4x Motores DC](https://www.baudaeletronica.com.br/kit-motor-dc-roda-para-robo.html?gclid=Cj0KCQjwlemWBhDUARIsAFp1rLW00mB4nPtRBvkEDu-Pbi6jc4--7_sxdB1tPdlnvmO11zAOBty6vgkaArnEEALw_wcB)**;
+* **[Ponte H](https://www.multcomercial.com.br/driver-motor-ponte-h-l298n-gc-37.html)**;
+* **[2x Pilhas Recarregáveis de 3.7V](https://produto.mercadolivre.com.br/MLB-1970377770-bateria-li-ion-18650-6800mah-37v-recarregavel-original-_JM?matt_tool=56291529&matt_word=&matt_source=google&matt_campaign_id=14303413604&matt_ad_group_id=133074303519&matt_match_type=&matt_network=g&matt_device=c&matt_creative=584156655498&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=563396324&matt_product_id=MLB1970377770&matt_product_partition_id=1413191054866&matt_target_id=aud-1396166235996:pla-1413191054866&gclid=Cj0KCQjwlemWBhDUARIsAFp1rLWpznwBvGwj6Ps4IEn81zq5ro9gGK0JZ8o83N7dHybLRSwkV-9QbZ4aAt4DEALw_wcB)**.
 
 OBS: Os links são apenas para ajudar na compra, mas o grupo não garante a procedência dessas lojas. 
 
